@@ -3577,10 +3577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1325069075}
-  machineGunFireSound: {fileID: 8300000, guid: d440c9f7407a04474bf738520785306b, type: 3}
-  rocketFireSound: {fileID: 8300000, guid: ce02cc583b9d84102a12a156e90ca692, type: 3}
-  laserFireSound: {fileID: 8300000, guid: ecfd1448780a3d740ab9adf63c435bc4, type: 3}
-  towerBuildSound: {fileID: 8300000, guid: ceddc15e2d07b4a65bdb173d7eb22830, type: 3}
 --- !u!4 &1325069074
 Transform:
   m_ObjectHideFlags: 0
@@ -5461,6 +5457,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 215965998}
     m_Modifications:
+    - target: {fileID: 2890690093196003085, guid: b5dd957d90f01a340b27a9fcf15eb1a5,
+        type: 3}
+      propertyPath: tower
+      value: 
+      objectReference: {fileID: 8911493939234785733, guid: cc4ba4a170bff074a8b31766b61e972c,
+        type: 3}
     - target: {fileID: 3500562222102913834, guid: b5dd957d90f01a340b27a9fcf15eb1a5,
         type: 3}
       propertyPath: m_CastShadows

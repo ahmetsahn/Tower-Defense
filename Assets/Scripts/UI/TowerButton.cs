@@ -15,7 +15,7 @@ public class TowerButton : MonoBehaviour
     public void SelectTower()
     {
         towerPrefab.SetActive(true);
-        GameEvents.LoadTowerButtonNotUseable();
+        UIController.Instance.TowerButtonsNotUseable();
     }
 
 }

@@ -52,14 +52,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    private void OnEnable() => AddListeners();
-
-    
-
-    private void OnDisable() => RemoveListeners();
-
-    
-
+   
     private void Start()
     {
         UpdateHealthText();
@@ -128,7 +121,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void ButtonUseable()
+    public void TowerButtonsUseable()
     {
         for (int i = 0; i < towerButtons.Length; i++)
         {
@@ -136,7 +129,7 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void ButtonNotUseable()
+    public void TowerButtonsNotUseable()
     {
         for (int i = 0; i < towerButtons.Length; i++)
         {
@@ -144,17 +137,5 @@ public class UIController : MonoBehaviour
         }
     }
 
-    private void AddListeners()
-    {
-        GameEvents.OnTowerButtonUseable += ButtonUseable;
-        GameEvents.OnTowerButtonNotUseable += ButtonNotUseable;
-    }
-
-    private void RemoveListeners()
-    {
-        GameEvents.OnTowerButtonUseable -= ButtonUseable;
-        GameEvents.OnTowerButtonNotUseable -= ButtonNotUseable;
-    }
-
-
+  
 }

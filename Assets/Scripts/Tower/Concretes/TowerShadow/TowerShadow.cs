@@ -56,7 +56,7 @@ public class TowerShadow : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             DeactiveTowerShadow();
-            GameEvents.LoadTowerButtonUseable();
+            UIController.Instance.TowerButtonsUseable();
         }
     }
 

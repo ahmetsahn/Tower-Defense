@@ -45,9 +45,7 @@ GameObject:
   - component: {fileID: 1158239020909174910}
   - component: {fileID: 5866366572777418733}
   - component: {fileID: 840056411387945345}
-  - component: {fileID: 7336136054843251532}
   - component: {fileID: 6694844558360359634}
-  - component: {fileID: 3734370528714248056}
   m_Layer: 0
   m_Name: LaserTower
   m_TagString: Untagged
@@ -136,7 +134,6 @@ MonoBehaviour:
   towerData: {fileID: 11400000, guid: 686951b3766bea24eaa5258eb9e4e0a1, type: 2}
   towerMove: {fileID: 5866366572777418733}
   towerTarget: {fileID: 840056411387945345}
-  towerAudioManager: {fileID: 7336136054843251532}
   projectileSpawnPoint: {fileID: 9038435103154086028}
 --- !u!114 &5866366572777418733
 MonoBehaviour:
@@ -166,18 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearestEnemy: {fileID: 0}
---- !u!114 &7336136054843251532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445488031791663795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd960a4a595e5c40b703c7998967d03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!120 &6694844558360359634
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -284,28 +269,3 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &3734370528714248056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445488031791663795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946c0a34555a28e438f5da3cf715cd1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartObject: {fileID: 4796168030495515914, guid: b437f872aa2799843aa043e0f8bc9007,
-    type: 3}
-  StartPosition: {x: 0, y: 0, z: 0}
-  EndObject: {fileID: 4796168030495626340, guid: b437f872aa2799843aa043e0f8bc9007,
-    type: 3}
-  EndPosition: {x: 0, y: 0, z: 0}
-  Generations: 3
-  Duration: 0.03
-  ChaosFactor: 0.15
-  ManualMode: 0
-  Rows: 8
-  Columns: 1
-  AnimationMode: 3

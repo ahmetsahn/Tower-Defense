@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 2512679227266630573}
   - component: {fileID: 5975033393460702550}
   - component: {fileID: -2793282829043872331}
-  - component: {fileID: 3107908954961086662}
   m_Layer: 10
   m_Name: RocketTower
   m_TagString: Untagged
@@ -187,7 +186,6 @@ MonoBehaviour:
   towerData: {fileID: 11400000, guid: 0971711d6baa82a43b56b53beec79710, type: 2}
   towerMove: {fileID: 5975033393460702550}
   towerTarget: {fileID: -2793282829043872331}
-  towerAudioManager: {fileID: 3107908954961086662}
   projectileSpawnPoint: {fileID: 3384408091237738907}
 --- !u!114 &5975033393460702550
 MonoBehaviour:
@@ -217,18 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearestEnemy: {fileID: 0}
---- !u!114 &3107908954961086662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3385957952855503763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd960a4a595e5c40b703c7998967d03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3386168328676566625
 GameObject:
   m_ObjectHideFlags: 0

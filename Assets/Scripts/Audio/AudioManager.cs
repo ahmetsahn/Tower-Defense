@@ -24,11 +24,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
+    
     public void PlaySound(AudioClip audioClip)
     {
         audioSource.PlayOneShot(audioClip);

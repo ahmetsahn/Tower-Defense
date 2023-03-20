@@ -13,10 +13,7 @@ public class TowerData : ScriptableObject
 
     [SerializeField]
     private int buildCost;
-    
-    [SerializeField]
-    private int upgradeCost;
-
+   
     [SerializeField]
     private GameObject buildEffect;
 
@@ -33,8 +30,6 @@ public class TowerData : ScriptableObject
     public float FireRate => fireRate;
 
     public int BuildCost => buildCost;
-
-    public int UpgradeCost => upgradeCost;
 
     public GameObject BuildEffect => buildEffect;
 

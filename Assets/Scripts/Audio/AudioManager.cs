@@ -8,23 +8,9 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] 
     private AudioSource audioSource;
-    public AudioSource AudioSource => audioSource;
+    
 
-    [SerializeField]
-    private AudioClip machineGunFireSound;
-    public AudioClip MachineGunFireSound => machineGunFireSound;
-
-    [SerializeField]
-    private AudioClip rocketFireSound;
-    public AudioClip RocketFireSound => rocketFireSound;
-
-    [SerializeField]
-    private AudioClip laserFireSound;
-    public AudioClip LaserFireSound => laserFireSound;
-
-    [SerializeField]
-    private AudioClip towerBuildSound;
-    public AudioClip TowerBuildSound => towerBuildSound;
+   
 
     private void Awake()
     {

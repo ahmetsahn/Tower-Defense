@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: LaserTowerData
   m_EditorClassIdentifier: 
   range: 18
-  fireRate: 0.5
+  fireRate: 0.1
   buildCost: 15
-  upgradeCost: 0
   buildEffect: {fileID: 288587446055073565, guid: a7e32ef4ffa70e84d9f086adb04e96a6,
     type: 3}
   attackSound: {fileID: 8300000, guid: f7f2b958b23574551b561f7e871a8306, type: 3}

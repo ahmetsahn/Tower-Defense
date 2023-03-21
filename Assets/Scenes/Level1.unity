@@ -1713,7 +1713,7 @@ MonoBehaviour:
   healthText: {fileID: 724997748}
   currentHealth: 10
   energyText: {fileID: 828156446}
-  currentEnergy: 50
+  currentEnergy: 200
   towerButtons:
   - {fileID: 1015793119}
   - {fileID: 854821625}

@@ -11,6 +11,7 @@ public class TowerMove : MonoBehaviour
     [SerializeField]
     private float rotationTime;
 
+
     private Quaternion defaultRotation;
 
     [SerializeField]
@@ -24,34 +25,39 @@ public class TowerMove : MonoBehaviour
 
     public void SetRotationToEnemy(GameObject nearestEnemy)
     {
-     
 
-            towerHead.DORotateQuaternion(Quaternion.LookRotation(nearestEnemy.transform.position - towerHead.position), rotationTime);
 
-            if (Vector3.Angle(towerHead.forward, nearestEnemy.transform.position - towerHead.position) < 5f)
-            {
-                enemyDetected = true;
-                rotationTime = 0.01f;
-            }
-            else
-            {
-                enemyDetected = false;
-                rotationTime = 0.5f;
-            }
+        towerHead.DORotateQuaternion(Quaternion.LookRotation(nearestEnemy.transform.position - towerHead.position), rotationTime);
 
-        
+        if (Vector3.Angle(towerHead.forward, nearestEnemy.transform.position - towerHead.position) < 5f)
+        {
+            SetEnemyDetected(true);
+            SetRotationSpeed(0.01f);
+        }
+        else
+        {
+            SetEnemyDetected(false);
+            SetRotationSpeed(0.5f);
+        }
 
+
+
+    }
+
+    public void SetEnemyDetected(bool value)
+    {
+        enemyDetected = value;
+    }
+
+    public void SetRotationSpeed(float newSpeed)
+    {
+        rotationTime = newSpeed;
     }
 
     public void SetDefaultRotation()
     {
-        
         rotationTime = 0.5f;
         towerHead.DORotateQuaternion(defaultRotation, rotationTime);
     }
 
-    public void SetEnemyDetectedFalse()
-    {
-        enemyDetected = false;
-    }
 }

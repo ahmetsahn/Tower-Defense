@@ -7,16 +7,15 @@ public class DefaultState : ITowerState
 {
     public void EnterState(BaseTower tower)
     {
-        tower.TowerMove.SetEnemyDetectedFalse();
+        Debug.Log("Enter Default State");
         tower.TowerMove.SetDefaultRotation();
     }
 
- 
+
     public void UpdateState(BaseTower tower)
     {
-        
 
-        if (tower.TowerTarget.NearestEnemy != null && tower.TowerTarget.ClosestDistance <= tower.TowerData.Range)
+        if (tower.TowerTarget.NearestEnemy != null)
         {
             tower.SwitchState(tower.attackState);
         }
@@ -24,8 +23,9 @@ public class DefaultState : ITowerState
         else
         {
             tower.TowerMove.SetDefaultRotation();
+            tower.TowerTarget.FindNearestEnemy(tower.TowerData,tower.TowerMove);
         }
     }
 
-    
+
 }

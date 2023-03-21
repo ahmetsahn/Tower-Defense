@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb6a7fe544aaca43babfb7f571383e0, type: 3}
   m_Name: LaserProjectileData
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 0.15
   moveSpeed: 100
   lifeTime: 0.17
   impactEffect: {fileID: 6644316286036333507, guid: fad1f1321358529469385bd41d4eaa7f,

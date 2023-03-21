@@ -15,8 +15,9 @@ MonoBehaviour:
   range: 18
   fireRate: 1
   buildCost: 12
-  upgradeCost: 0
   buildEffect: {fileID: 288587446055073565, guid: a7e32ef4ffa70e84d9f086adb04e96a6,
     type: 3}
   attackSound: {fileID: 8300000, guid: ce02cc583b9d84102a12a156e90ca692, type: 3}
   buildSound: {fileID: 8300000, guid: ceddc15e2d07b4a65bdb173d7eb22830, type: 3}
+  projectileSpawnPoint: {fileID: 403462424344547922, guid: 8d6f282417566a948b9fa2de7830b034,
+    type: 3}

@@ -12,9 +12,9 @@ public class AttackState : ITowerState
 
     public void UpdateState(BaseTower tower)
     {
-        
 
-        if (tower.TowerTarget.NearestEnemy == null || tower.TowerTarget.ClosestDistance > tower.TowerData.Range)
+
+        if (tower.TowerTarget.NearestEnemy == null)
         {
             tower.SwitchState(tower.defaultState);
         }
@@ -22,9 +22,10 @@ public class AttackState : ITowerState
         else
         {
             tower.TowerMove.SetRotationToEnemy(tower.TowerTarget.NearestEnemy);
+            tower.TowerTarget.FindNearestEnemy(tower.TowerData, tower.TowerMove);
             tower.Attack();
         }
 
-        
+
     }
 }

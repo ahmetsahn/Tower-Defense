@@ -9,34 +9,35 @@ public class TowerTarget : MonoBehaviour
     private GameObject nearestEnemy;
     public GameObject NearestEnemy => nearestEnemy;
 
-    private float closestDistance;
-    public float ClosestDistance => closestDistance;
+    private float newEnemyDistance;
+    public float NewEnemyDistance => newEnemyDistance;
 
 
-    private void Update()
+    public void FindNearestEnemy(TowerData towerData,TowerMove towerMove)
     {
-        FindNearestEnemy();
-    }
+        // Belli bir range içerisine giren düþmanlarý belirle ve daha yakýn bir düþman girip girmediðini kontrol et
 
-    public void FindNearestEnemy()
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        nearestEnemy = null;
-
-        closestDistance = Mathf.Infinity;
-
-        foreach (GameObject enemy in enemies)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, towerData.Range);
+        foreach (Collider collider in colliders)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < closestDistance)
+            if (collider.gameObject.CompareTag("Enemy"))
             {
-                nearestEnemy = enemy;
-                closestDistance = distanceToEnemy;
+                newEnemyDistance = Vector3.Distance(transform.position, collider.transform.position);
+                if (nearestEnemy == null)
+                {
+                    nearestEnemy = collider.gameObject;
+                }
+                else if (newEnemyDistance < Vector3.Distance(transform.position, nearestEnemy.transform.position))
+                {
+                    nearestEnemy = collider.gameObject;
+                    towerMove.SetRotationSpeed(0.5f);
+                }
             }
 
+            else
+            {
+                nearestEnemy = null;
+            }
         }
     }
-
-    
 }

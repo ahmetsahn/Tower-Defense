@@ -9,9 +9,9 @@ public abstract class Projectile : MonoBehaviour
     
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<Enemy>()!=null)
+        if(other.gameObject.TryGetComponent(out Enemy enemy))
         {
-            other.gameObject.GetComponent<Enemy>().TakeDamage(projectileData.Damage);
+            enemy.TakeDamage(projectileData.Damage);
         }
 
         

@@ -12,7 +12,7 @@ public class EnemyInstantiatePoint : MonoBehaviour
 
     private void StartWave()
     {
-        InvokeRepeating("InstantiateEnemy", 0, 7);
+        InvokeRepeating("InstantiateEnemy", 0, 2);
     }
 
     public void InstantiateEnemy()

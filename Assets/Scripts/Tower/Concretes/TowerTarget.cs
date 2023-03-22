@@ -25,12 +25,13 @@ public class TowerTarget : MonoBehaviour
                 newEnemyDistance = Vector3.Distance(transform.position, collider.transform.position);
                 if (nearestEnemy == null)
                 {
+                    towerMove.SetRotationSpeed(0.5f);
                     nearestEnemy = collider.gameObject;
                 }
                 else if (newEnemyDistance < Vector3.Distance(transform.position, nearestEnemy.transform.position))
                 {
-                    nearestEnemy = collider.gameObject;
                     towerMove.SetRotationSpeed(0.5f);
+                    nearestEnemy = collider.gameObject;
                 }
             }
 

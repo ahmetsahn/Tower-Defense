@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class GameManager : MonoBehaviour
+public class TransformLists : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static TransformLists Instance { get; private set; }
 
     public List<Transform> pathPointsList = new List<Transform>();
 

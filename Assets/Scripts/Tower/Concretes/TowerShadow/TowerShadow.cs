@@ -31,7 +31,7 @@ public class TowerShadow : MonoBehaviour
     private void BuildPointTransformControl()
     {
         
-            foreach (Transform target in GameManager.Instance.buildPointsTransform)
+            foreach (Transform target in TransformLists.Instance.buildPointsTransform)
             {
                 if (Vector3.Distance(transform.position, target.position) < 3f)
                 {
@@ -68,7 +68,7 @@ public class TowerShadow : MonoBehaviour
 
             DeactiveTowerShadow();
 
-            GameManager.Instance.buildPointsTransform.Remove(target);
+            TransformLists.Instance.buildPointsTransform.Remove(target);
         }
     }
 

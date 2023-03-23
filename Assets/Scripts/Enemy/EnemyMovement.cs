@@ -15,18 +15,18 @@ public class EnemyMovement : MonoBehaviour
 
     public void Move(Enemy enemy)
     {
-        transform.position = Vector3.MoveTowards(transform.position, GameManager.Instance.pathPointsList[pathPointsIndex].position, movementSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, TransformLists.Instance.pathPointsList[pathPointsIndex].position, movementSpeed * Time.deltaTime);
 
-        Vector3 direction = GameManager.Instance.pathPointsList[pathPointsIndex].position - transform.position;
+        Vector3 direction = TransformLists.Instance.pathPointsList[pathPointsIndex].position - transform.position;
 
         Quaternion rotation = Quaternion.LookRotation(direction);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
 
-        if (Vector3.Distance(transform.position, GameManager.Instance.pathPointsList[pathPointsIndex].position) < 0.1f)
+        if (Vector3.Distance(transform.position, TransformLists.Instance.pathPointsList[pathPointsIndex].position) < 0.1f)
         {
-            if (pathPointsIndex < GameManager.Instance.pathPointsList.Count - 1)
+            if (pathPointsIndex < TransformLists.Instance.pathPointsList.Count - 1)
             {
                 pathPointsIndex++;
             }

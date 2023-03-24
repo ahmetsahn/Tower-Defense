@@ -75,12 +75,12 @@ public abstract class BaseTower : MonoBehaviour
 
     public void PlayBuildSound(TowerData towerData)
     {
-        AudioManager.Instance.PlaySound(towerData.BuildSound);
+        AudioManager.Instance.PlaySound(towerData.BuildSound,transform.position,1);
     }
 
     public void PlayAttackSound(TowerData towerData)
     {
-        AudioManager.Instance.PlaySound(towerData.AttackSound);
+        AudioManager.Instance.PlaySound(towerData.AttackSound,transform.position,1);
     }
 }    
    

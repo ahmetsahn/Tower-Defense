@@ -2,33 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : Singleton<AudioManager>
 {
-    public static AudioManager Instance { get; private set; }
-
     [SerializeField] 
-    private AudioSource audioSource;
-    
+    private AudioSource musicSource;
+    [SerializeField]
+    private AudioSource soundSource;
 
-   
-
-    private void Awake()
+    public void PlayMusic(AudioClip clip)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        musicSource.clip = clip;
+        musicSource.Play();
     }
 
-    
-    public void PlaySound(AudioClip audioClip)
+
+    public void PlaySound(AudioClip clip, Vector3 pos, float vol = 1)
     {
-        audioSource.PlayOneShot(audioClip);
+        soundSource.transform.position = pos;
+        PlaySound(clip,vol);
     }
 
+    private void PlaySound(AudioClip clip, float volume)
+    {
+        soundSource.PlayOneShot(clip, volume);
+    }
    
+
+
 }

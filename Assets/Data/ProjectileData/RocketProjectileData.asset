@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb6a7fe544aaca43babfb7f571383e0, type: 3}
   m_Name: RocketProjectileData
   m_EditorClassIdentifier: 
-  damage: 0.4
-  moveSpeed: 50
-  lifeTime: 0.3
+  projectileStats:
+    damage: 0.25
+    moveSpeed: 50
+    lifeTime: 0.3
   impactEffect: {fileID: 4509766663108960852, guid: b82edc0f19f86ce4a87c2cfdded2e54e,
     type: 3}

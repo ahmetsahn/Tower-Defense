@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb6a7fe544aaca43babfb7f571383e0, type: 3}
   m_Name: MachineGunProjectileData
   m_EditorClassIdentifier: 
-  damage: 0.3
-  moveSpeed: 100
-  lifeTime: 0.15
+  projectileStats:
+    damage: 0.15
+    moveSpeed: 100
+    lifeTime: 0.17
   impactEffect: {fileID: 8347534301988751169, guid: 975c97fac9fdeea43840337d4f90b13e,
     type: 3}

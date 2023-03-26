@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField]
@@ -35,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 EnemyPool.Instance.ReturnToPool(enemy);
                 pathPointsIndex = 0;
-                enemy.CurrentHealth = enemy.EnemyData.StartHealth;
+                enemy.CurrentHealth = enemy.EnemyData.EnemyStats.Health;
                 UIController.Instance.ReduceHealth();
                 UIController.Instance.UpdateHealthText();
             }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,23 +7,22 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     [SerializeField]
-    private int increaseEnergy;
+    private EnemyStats enemyStats;
+    public EnemyStats EnemyStats => enemyStats;
 
     [SerializeField]
     private GameObject deathEffect;
+    public GameObject DeathEffect => deathEffect;
+}
+
+[Serializable]
+public struct EnemyStats
+{
+    [SerializeField]
+    private float health;
+    public float Health => health;
 
     [SerializeField]
-    private float startHealth;
-
+    private int increaseEnergy;
     public int IncreaseEnergy => increaseEnergy;
-
-    public GameObject DeathEffect => deathEffect;
-
-    public float StartHealth
-    {
-        get => startHealth;
-        set => startHealth = value;
-    }
-
-
 }

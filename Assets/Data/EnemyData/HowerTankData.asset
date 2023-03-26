@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439ea211da7495e48aa83c9062582e9e, type: 3}
   m_Name: HowerTankData
   m_EditorClassIdentifier: 
-  increaseEnergy: 1
+  enemyStats:
+    health: 10
+    increaseEnergy: 5
   deathEffect: {fileID: 1082826025734650, guid: 42a3690e5d4a841ad958c0e3b9b7b19e,
     type: 3}
-  startHealth: 10

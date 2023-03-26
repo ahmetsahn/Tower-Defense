@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f1cba93e2350a94ebac95e501255f3c, type: 3}
   m_Name: MachineGunTowerData
   m_EditorClassIdentifier: 
-  range: 15
-  fireRate: 0.2
-  buildCost: 4
+  towerStats:
+    range: 18
+    fireRate: 0.25
+    buildCost: 4
   buildEffect: {fileID: 288587446055073565, guid: a7e32ef4ffa70e84d9f086adb04e96a6,
     type: 3}
   attackSound: {fileID: 8300000, guid: d440c9f7407a04474bf738520785306b, type: 3}
   buildSound: {fileID: 8300000, guid: ceddc15e2d07b4a65bdb173d7eb22830, type: 3}
-  projectileSpawnPoint: {fileID: 4532744539717685169, guid: 04e0db873df7022459e67ad6516764c2,
-    type: 3}

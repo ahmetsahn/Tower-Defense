@@ -11,7 +11,7 @@ public abstract class Projectile : MonoBehaviour
     {
         if(other.gameObject.TryGetComponent(out Enemy enemy))
         {
-            enemy.TakeDamage(projectileData.Damage);
+            enemy.TakeDamage(projectileData.ProjectileStats.Damage);
         }
 
         
@@ -20,6 +20,8 @@ public abstract class Projectile : MonoBehaviour
 
     protected void Update()
     {
-        transform.Translate(Vector3.forward * projectileData.MoveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * projectileData.ProjectileStats.MoveSpeed * Time.deltaTime);
     }
+
+
 }

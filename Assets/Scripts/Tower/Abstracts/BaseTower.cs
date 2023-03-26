@@ -63,7 +63,7 @@ public abstract class BaseTower : MonoBehaviour
 
     protected IEnumerator AttackDelay()
     {
-        yield return new WaitForSeconds(towerData.FireRate);
+        yield return new WaitForSeconds(towerData.TowerStats.FireRate);
         canFire = true;
     }
 

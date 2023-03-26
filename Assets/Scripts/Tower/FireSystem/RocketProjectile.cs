@@ -6,7 +6,7 @@ public class RocketProjectile : Projectile
 {
     private void OnEnable()
     {
-        StartCoroutine(DeactiveProjectile());
+        StartCoroutine(DeactiveProjectileDelay());
     }
 
     protected override void OnTriggerEnter(Collider other)
@@ -21,9 +21,9 @@ public class RocketProjectile : Projectile
 
     }
 
-    IEnumerator DeactiveProjectile()
+    IEnumerator DeactiveProjectileDelay()
     {
-        yield return new WaitForSeconds(projectileData.LifeTime);
+        yield return new WaitForSeconds(projectileData.ProjectileStats.LifeTime);
         RocketProjectilePool.Instance.ReturnToPool(this);
     }
 }

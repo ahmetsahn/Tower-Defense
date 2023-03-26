@@ -17,7 +17,7 @@ public class TowerTarget : MonoBehaviour
     {
         // Belli bir range içerisine giren düþmanlarý belirle ve daha yakýn bir düþman girip girmediðini kontrol et
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, towerData.Range);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, towerData.TowerStats.Range);
         foreach (Collider collider in colliders)
         {
             if (collider.gameObject.CompareTag("Enemy"))

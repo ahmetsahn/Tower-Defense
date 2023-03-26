@@ -88,7 +88,7 @@ public class TowerShadow : MonoBehaviour
         var newTower = Instantiate(tower);
         newTower.transform.position = transform.position;
         newTower.transform.rotation = transform.rotation;
-        UIController.Instance.ReduceEnergy(newTower.GetComponent<BaseTower>().TowerData.BuildCost);
+        UIController.Instance.ReduceEnergy(newTower.GetComponent<BaseTower>().TowerData.TowerStats.BuildCost);
         UIController.Instance.UpdateEnergyText();
     }
 

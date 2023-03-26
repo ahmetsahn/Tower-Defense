@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
 
     private void SetCurrentHealth()
     {
-        currentHealth = enemyData.StartHealth;
+        currentHealth = enemyData.EnemyStats.Health;
     }
 
     private void ReduceCurrentHealth(float damage)
@@ -52,11 +52,13 @@ public class Enemy : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            UIController.Instance.IncreaseEnergy(enemyData.EnemyStats.IncreaseEnergy);
+            UIController.Instance.UpdateEnergyText();
             ReturnToPool();
             ResetPathIndex();
             ResetHealth();
             LoadDeathEffect();
-            IncreaseEnergy();
+            
         }
     }
 
@@ -74,7 +76,7 @@ public class Enemy : MonoBehaviour
 
     private void ResetHealth()
     {
-        currentHealth = enemyData.StartHealth;
+        currentHealth = enemyData.EnemyStats.Health;
     }
 
     private void LoadDeathEffect()
@@ -82,11 +84,9 @@ public class Enemy : MonoBehaviour
         Instantiate(enemyData.DeathEffect, transform.position, Quaternion.identity);
     }
 
-    private void IncreaseEnergy()
-    {
-        UIController.Instance.IncreaseEnergy(enemyData.IncreaseEnergy);
-        UIController.Instance.UpdateEnergyText();
-    }
+   
+        
+    
 
    
 }
